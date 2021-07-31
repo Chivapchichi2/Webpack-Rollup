@@ -1,0 +1,24 @@
+{
+  "name": "webpack-rollup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chivapchichi2/Webpack-Rollup.git"
+  },
+  "keywords": [],
+  "author": "Ivchenko Pavel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chivapchichi2/Webpack-Rollup/issues"
+  },
+  "homepage": "https://github.com/Chivapchichi2/Webpack-Rollup#readme"
+}
