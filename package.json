@@ -1,0 +1,24 @@
+{
+  "name": "webpack-rollup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chivapchichi2/Webpack-Rollup.git"
+  },
+  "keywords": [
+    "Webpack",
+    "Rollup"
+  ],
+  "author": "Ivchenko Pavel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chivapchichi2/Webpack-Rollup/issues"
+  },
+  "homepage": "https://github.com/Chivapchichi2/Webpack-Rollup#readme"
+}
