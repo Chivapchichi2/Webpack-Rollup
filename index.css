@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: lightblue;
+  color: darkblue;
+}
+
+.webpackImg {
+  width: 600px;
+  height: auto;
+}
