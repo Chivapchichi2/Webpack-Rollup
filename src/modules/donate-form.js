@@ -1,24 +1,23 @@
 export class DonateForm {
   #form;
-  #total;
-  constructor() {
+  #totalAmount;
+  #createNewDonate;
+
+  constructor(totalAmount, createNewDonate) {
     this.#form = document.createElement('form');
     this.#form.className = 'donate-form';
-    this.#total = '0$';
+    this.#totalAmount = `${totalAmount}$`;
+    this.#createNewDonate = createNewDonate;
   }
 
-  set total(newTotal) {
-    this.#total = `${newTotal}$`;
-  }
-
-  get total() {
-    return this.#total;
+  updateTotalAmount(newAmount) {
+    document.getElementById('total-amount').textContent = `${newAmount}$`;
   }
 
   render() {
     const title = document.createElement('h1');
     title.id = 'total-amount';
-    title.textContent = this.total;
+    title.textContent = this.#totalAmount;
 
     const label = document.createElement('label');
     label.className = 'donate-form__input-label';
@@ -31,6 +30,7 @@ export class DonateForm {
     input.max = '100';
     input.min = '0';
     input.required = '';
+    input.autocomplete = 'off';
 
     label.append(input);
 

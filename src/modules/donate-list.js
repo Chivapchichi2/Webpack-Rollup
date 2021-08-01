@@ -7,6 +7,26 @@ export class DonateList {
     this.#container.className = 'donates-container';
   }
 
+  updateDonates(updatedDonates) {
+    const donatesContainerRef = document.querySelector(
+      '.donates-container__donates',
+    );
+    donatesContainerRef.innerHTML = '';
+    donatesContainerRef.append(
+      ...updatedDonates.map(({ amount, date }) => {
+        const div = document.createElement('div');
+        div.className = 'donate-item';
+        div.textContent = `${date} - `;
+
+        const b = document.createElement('b');
+        b.textContent = `${amount}$`;
+        div.append(b);
+
+        return div;
+      }),
+    );
+  }
+
   render() {
     const title = document.createElement('h2');
     title.className = 'donates-container__title';
