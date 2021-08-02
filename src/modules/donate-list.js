@@ -1,3 +1,5 @@
+import { Settings as settings } from '../core/constants/settings';
+
 export class DonateList {
   #donates;
   #container;
@@ -19,7 +21,7 @@ export class DonateList {
         div.textContent = `${date} - `;
 
         const b = document.createElement('b');
-        b.textContent = `${amount}$`;
+        b.textContent = `${amount}${settings.currency}`;
         div.append(b);
 
         return div;
@@ -42,7 +44,7 @@ export class DonateList {
         div.textContent = `${date} - `;
 
         const b = document.createElement('b');
-        b.textContent = `${amount}$`;
+        b.textContent = `${amount}${settings.currency}`;
         div.append(b);
 
         return div;
