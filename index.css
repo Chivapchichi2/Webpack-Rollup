@@ -35,7 +35,7 @@ body {
   list-style: none;
   border-left: 10px solid var(--primary-color);
   padding: 0;
-  height: 75%;
+  height: 50%;
   width: 40%;
   overflow: hidden;
 }
@@ -157,9 +157,16 @@ body {
 }
 .buttons-list {
   margin: 0 -10px;
+  padding: 20px 15px;
+  height: 10%;
   list-style: none;
   display: flex;
   justify-content: center;
+}
+
+.buttons-list > li {
+  display: flex;
+  align-items: center;
 }
 
 .button {
@@ -179,4 +186,41 @@ body {
   transform: scale(1.2);
   color: var(--main-background);
   background-color: var(--default-text-color);
+}
+
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 2rem;
+}
+
+.timer-title {
+  width: 100%;
+  margin: 0 0 10px;
+  padding: 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.field {
+  margin: 0 10px;
+}
+
+.value[data-value='days'] {
+  color: tomato;
+}
+
+.value[data-value='hours'] {
+  color: orange;
+}
+
+.value[data-value='mins'] {
+  color: yellow;
+}
+
+.value[data-value='secs'] {
+  color: var(--default-text-color);
 }

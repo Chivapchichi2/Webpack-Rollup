@@ -12,10 +12,12 @@ appOverTask.run();
 const formRef = document.querySelector('.donate-form');
 const donatesListRef = document.querySelector('.donates-container');
 const buttonsListRef = document.querySelector('.buttons-list');
+const timerRef = document.getElementById('timer');
 
 formRef.style.display = 'none';
 donatesListRef.style.display = 'none';
 buttonsListRef.style.display = 'none';
+timerRef.style.display = 'none';
 
 const headerRef = document.getElementById('header');
 headerRef.addEventListener('click', ({ target }) => {
