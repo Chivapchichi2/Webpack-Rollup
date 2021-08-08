@@ -24,7 +24,7 @@ function createMathTest(minNum = 0, maxNum = 100) {
       result = firstNumber * secondNumber;
       break;
     case '/':
-      result = (firstNumber / secondNumber).toFixed(2);
+      result = Number((firstNumber / secondNumber).toFixed(2));
       break;
     default:
       result = firstNumber + secondNumber;
@@ -54,6 +54,9 @@ export default class Task1 {
   get right() {
     return this.#state.right;
   }
+  get wrong() {
+    return this.#state.wrong;
+  }
   set clear(n) {
     this.#state = {
       right: n,
@@ -68,12 +71,12 @@ export default class Task1 {
   }
 
   run() {
-    const minNumb = Number(prompt('Сhoose the smallest number').trim());
-    const maxNumb = Number(prompt('Сhoose the largest  number').trim());
+    const minNumb = Number(prompt('Choose the smallest number')?.trim());
+    const maxNumb = Number(prompt('Choose the largest  number')?.trim());
+    const repeat = Number(prompt('Select the number of tasks')?.trim());
     const makeQuestion = () => {
       const expression = this.test(minNumb, maxNumb);
-      alert(expression.expression);
-      const userAnswer = Number(prompt('').trim());
+      const userAnswer = Number(prompt(expression.expression).trim());
       if (expression.result === userAnswer) {
         this.right = 1;
         alert(`This is right!!! ${userAnswer}`);
@@ -84,12 +87,11 @@ export default class Task1 {
         );
       }
     };
-    makeQuestion();
-    makeQuestion();
-    makeQuestion();
-    makeQuestion();
-    makeQuestion();
-    alert(`Your mark is ${this.right}. Max mark is 5`);
+    for (let i = 0; i < repeat; i++) {
+      makeQuestion();
+    }
+    const mark = Math.round((5 * this.right) / (this.right + this.wrong));
+    alert(`Your mark is ${mark}. Max mark is 5`);
     this.clear = 0;
   }
 }
