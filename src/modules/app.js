@@ -52,7 +52,8 @@ export default class App {
   }
 
   run() {
-    document.body.append(this.#donateForm.render(), this.#donateList.render());
+    const root = document.getElementById('root');
+    root.append(this.#donateForm.render(), this.#donateList.render());
     document
       .querySelector('.donate-form')
       .addEventListener('submit', this.handleSubmit.bind(this));
