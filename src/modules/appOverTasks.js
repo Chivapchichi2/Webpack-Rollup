@@ -1,8 +1,10 @@
 import Button from './button';
 import Task1 from '../core/utils/task1';
 import Task2 from '../core/utils/task2';
+import Task3 from '../core/utils/task3';
+import Task4 from '../core/utils/task4';
 
-const taskArray = [new Task1(), new Task2()];
+const taskArray = [new Task1(), new Task2(), new Task3(), new Task4()];
 
 export default class AppOverTasks {
   run() {
